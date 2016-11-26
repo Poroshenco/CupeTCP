@@ -1,0 +1,9 @@
+c:\users\komp\documents\visual studio 2015\Projects\CubeTCP_Client\CubeTCP_Client\bin\Debug\CubeTCP_Client.exe.config
+c:\users\komp\documents\visual studio 2015\Projects\CubeTCP_Client\CubeTCP_Client\bin\Debug\CubeTCP_Client.exe
+c:\users\komp\documents\visual studio 2015\Projects\CubeTCP_Client\CubeTCP_Client\bin\Debug\CubeTCP_Client.pdb
+c:\users\komp\documents\visual studio 2015\Projects\CubeTCP_Client\CubeTCP_Client\obj\Debug\CubeTCP_Client.csprojResolveAssemblyReference.cache
+c:\users\komp\documents\visual studio 2015\Projects\CubeTCP_Client\CubeTCP_Client\obj\Debug\CubeTCP_Client.Form1.resources
+c:\users\komp\documents\visual studio 2015\Projects\CubeTCP_Client\CubeTCP_Client\obj\Debug\CubeTCP_Client.Properties.Resources.resources
+c:\users\komp\documents\visual studio 2015\Projects\CubeTCP_Client\CubeTCP_Client\obj\Debug\CubeTCP_Client.csproj.GenerateResource.Cache
+c:\users\komp\documents\visual studio 2015\Projects\CubeTCP_Client\CubeTCP_Client\obj\Debug\CubeTCP_Client.exe
+c:\users\komp\documents\visual studio 2015\Projects\CubeTCP_Client\CubeTCP_Client\obj\Debug\CubeTCP_Client.pdb

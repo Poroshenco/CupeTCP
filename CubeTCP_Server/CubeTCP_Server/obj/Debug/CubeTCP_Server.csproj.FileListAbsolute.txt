@@ -1,0 +1,8 @@
+c:\users\komp\documents\visual studio 2015\Projects\CubeTCP_Server\CubeTCP_Server\bin\Debug\CubeTCP_Server.exe.config
+c:\users\komp\documents\visual studio 2015\Projects\CubeTCP_Server\CubeTCP_Server\bin\Debug\CubeTCP_Server.exe
+c:\users\komp\documents\visual studio 2015\Projects\CubeTCP_Server\CubeTCP_Server\bin\Debug\CubeTCP_Server.pdb
+c:\users\komp\documents\visual studio 2015\Projects\CubeTCP_Server\CubeTCP_Server\obj\Debug\CubeTCP_Server.Form1.resources
+c:\users\komp\documents\visual studio 2015\Projects\CubeTCP_Server\CubeTCP_Server\obj\Debug\CubeTCP_Server.Properties.Resources.resources
+c:\users\komp\documents\visual studio 2015\Projects\CubeTCP_Server\CubeTCP_Server\obj\Debug\CubeTCP_Server.csproj.GenerateResource.Cache
+c:\users\komp\documents\visual studio 2015\Projects\CubeTCP_Server\CubeTCP_Server\obj\Debug\CubeTCP_Server.exe
+c:\users\komp\documents\visual studio 2015\Projects\CubeTCP_Server\CubeTCP_Server\obj\Debug\CubeTCP_Server.pdb
