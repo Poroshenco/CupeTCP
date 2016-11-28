@@ -51,6 +51,8 @@ namespace CubeTCP_Client
             Height = pictureBox1.Height;
 
             arr = new int[Convert.ToInt32(Width / CELL), Convert.ToInt32(Height / CELL)];
+
+            Draw();
         }
 
         public void Draw()
@@ -68,6 +70,15 @@ namespace CubeTCP_Client
                 }
             }
 
+            for (int i = 0; i < Width / CELL + 1; i++)
+            {
+                graph.DrawLine(new Pen(Color.Black), i * CELL, 0, i * CELL, Height);
+            }
+            for (int i = 0; i < Height / CELL + 1; i++)
+            {
+                graph.DrawLine(new Pen(Color.Black), 0, i * CELL, Width, i * CELL);
+            }
+
             pictureBox1.Image = bmp;
         }
 
@@ -79,13 +90,22 @@ namespace CubeTCP_Client
             if (e.Button == MouseButtons.Left)
             {
                 arr[X, Y] = 1;
-                this.sender.Send(Encoding.UTF8.GetBytes(X + " " + Y + " " + 1));
+                try
+                {
+                    this.sender.Send(Encoding.UTF8.GetBytes(X + " " + Y + " " + 1));
+                }
+                catch (Exception) { }
+                
             }
 
             if (e.Button == MouseButtons.Right)
             {
                 arr[X, Y] = 0;
-                this.sender.Send(Encoding.UTF8.GetBytes(X + " " + Y + " " + 0));
+                try
+                {
+                    this.sender.Send(Encoding.UTF8.GetBytes(X + " " + Y + " " + 0));
+                }
+                catch (Exception) { }
             }
             Draw();
         }

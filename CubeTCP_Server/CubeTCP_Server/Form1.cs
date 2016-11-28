@@ -31,6 +31,8 @@ namespace CubeTCP_Server
 
             arr = new int[Convert.ToInt32(Width / CELL), Convert.ToInt32(Height / CELL)];
 
+            Draw();
+
             Socket sListener = new Socket(ipAddr.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
 
             sListener.Bind(ipEnd);
@@ -88,7 +90,18 @@ namespace CubeTCP_Server
                 {
                     if (arr[i, j] == 1)
                         graph.FillRectangle(new SolidBrush(Color.Red), i * CELL, j * CELL, CELL, CELL);
+                    if (arr[i, j] == 2)
+                        graph.FillRectangle(new SolidBrush(Color.Yellow), i * CELL, j * CELL, CELL, CELL);
                 }
+            }
+
+            for (int i = 0; i < Width / CELL + 1; i++)
+            {
+                graph.DrawLine(new Pen(Color.Black), i * CELL, 0, i * CELL, Height);
+            }
+            for (int i = 0; i < Height / CELL + 1; i++)
+            {
+                graph.DrawLine(new Pen(Color.Black), 0, i * CELL, Width, i * CELL);
             }
 
             Action action = () =>
