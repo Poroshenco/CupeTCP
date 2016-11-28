@@ -64,7 +64,7 @@ namespace CubeTCP_Client
                 for (int j = 0; j < Height / CELL; j++)
                 {
                     if (arr[i, j] == 1)
-                        graph.FillRectangle(new SolidBrush(Color.Yellow), i * CELL, j * CELL, CELL, CELL);
+                        graph.FillRectangle(new SolidBrush(Color.Red), i * CELL, j * CELL, CELL, CELL);
                 }
             }
 
@@ -79,13 +79,13 @@ namespace CubeTCP_Client
             if (e.Button == MouseButtons.Left)
             {
                 arr[X, Y] = 1;
-                this.sender.Send(Encoding.UTF8.GetBytes(X + " " + Y));
+                this.sender.Send(Encoding.UTF8.GetBytes(X + " " + Y + " " + 1));
             }
 
             if (e.Button == MouseButtons.Right)
             {
                 arr[X, Y] = 0;
-                this.sender.Send(Encoding.UTF8.GetBytes(X + " " + Y));
+                this.sender.Send(Encoding.UTF8.GetBytes(X + " " + Y + " " + 0));
             }
             Draw();
         }
