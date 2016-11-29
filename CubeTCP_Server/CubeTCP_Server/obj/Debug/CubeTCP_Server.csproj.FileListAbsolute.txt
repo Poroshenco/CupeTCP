@@ -6,4 +6,3 @@ c:\users\komp\documents\visual studio 2015\Projects\CubeTCP_Server\CubeTCP_Serve
 c:\users\komp\documents\visual studio 2015\Projects\CubeTCP_Server\CubeTCP_Server\obj\Debug\CubeTCP_Server.csproj.GenerateResource.Cache
 c:\users\komp\documents\visual studio 2015\Projects\CubeTCP_Server\CubeTCP_Server\obj\Debug\CubeTCP_Server.exe
 c:\users\komp\documents\visual studio 2015\Projects\CubeTCP_Server\CubeTCP_Server\obj\Debug\CubeTCP_Server.pdb
-C:\Users\komp\Documents\Visual Studio 2015\Projects\CubeTCP_Server\CubeTCP_Server\obj\Debug\CubeTCP_Server.csprojResolveAssemblyReference.cache

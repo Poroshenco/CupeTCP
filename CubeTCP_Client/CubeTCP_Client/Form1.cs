@@ -15,18 +15,20 @@ namespace CubeTCP_Client
 {
     public partial class Form1 : Form
     {
-        public const int CELL = 40;
-        public int Width, Height;
+        const int CELL = 40;
+        int Width, Height;
 
-        private int[,] arr;
+        int color = 4;
 
-        public List<Point> cubes;
+        int[,] arr;
 
-        private IPAddress ipAddr;
-        private int port = 11000;
-        private IPEndPoint ipEnd;
+        List<Point> cubes;
 
-        private Socket sender;
+        IPAddress ipAddr;
+        int port = 11000;
+        IPEndPoint ipEnd;
+
+        Socket sender;
 
         public Form1()
         {
@@ -46,6 +48,7 @@ namespace CubeTCP_Client
             {
 
             }
+
 
             Width = pictureBox1.Width;
             Height = pictureBox1.Height;
@@ -67,6 +70,12 @@ namespace CubeTCP_Client
                 {
                     if (arr[i, j] == 1)
                         graph.FillRectangle(new SolidBrush(Color.Red), i * CELL, j * CELL, CELL, CELL);
+                    if (arr[i, j] == 2)
+                        graph.FillRectangle(new SolidBrush(Color.Yellow), i * CELL, j * CELL, CELL, CELL);
+                    if (arr[i, j] == 3)
+                        graph.FillRectangle(new SolidBrush(Color.Black), i * CELL, j * CELL, CELL, CELL);
+                    if (arr[i, j] == 4)
+                        graph.FillRectangle(new SolidBrush(Color.Purple), i * CELL, j * CELL, CELL, CELL);
                 }
             }
 
@@ -82,6 +91,22 @@ namespace CubeTCP_Client
             pictureBox1.Image = bmp;
         }
 
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            char temp = e.KeyData.ToString().ToLower()[0];
+            if ("rpby".Contains(temp))
+            {
+                if (temp == 'r')
+                    color = 1;
+                if (temp == 'y')
+                    color = 2;
+                if (temp == 'b')
+                    color = 3;
+                if (temp == 'p')
+                    color = 4;
+            }
+        }
+
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
             int X = Convert.ToInt32(e.X / CELL);
@@ -89,25 +114,26 @@ namespace CubeTCP_Client
 
             if (e.Button == MouseButtons.Left)
             {
-                arr[X, Y] = 1;
-                try
-                {
-                    this.sender.Send(Encoding.UTF8.GetBytes(X + " " + Y + " " + 1));
-                }
-                catch (Exception) { }
-                
+                arr[X, Y] = color;
+                Send(X, Y, color);
+
             }
 
             if (e.Button == MouseButtons.Right)
             {
                 arr[X, Y] = 0;
-                try
-                {
-                    this.sender.Send(Encoding.UTF8.GetBytes(X + " " + Y + " " + 0));
-                }
-                catch (Exception) { }
+                Send(X, Y, 0);
             }
             Draw();
+        }
+
+        public void Send(int X, int Y, int COLOR)
+        {
+            try
+            {
+                sender.Send(Encoding.UTF8.GetBytes(X + " " + Y + " " + COLOR));
+            }
+            catch (Exception) { }
         }
     }
 }

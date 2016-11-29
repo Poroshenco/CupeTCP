@@ -92,6 +92,10 @@ namespace CubeTCP_Server
                         graph.FillRectangle(new SolidBrush(Color.Red), i * CELL, j * CELL, CELL, CELL);
                     if (arr[i, j] == 2)
                         graph.FillRectangle(new SolidBrush(Color.Yellow), i * CELL, j * CELL, CELL, CELL);
+                    if (arr[i, j] == 3)
+                        graph.FillRectangle(new SolidBrush(Color.Black), i * CELL, j * CELL, CELL, CELL);
+                    if (arr[i, j] == 4)
+                        graph.FillRectangle(new SolidBrush(Color.Purple), i * CELL, j * CELL, CELL, CELL);
                 }
             }
 
